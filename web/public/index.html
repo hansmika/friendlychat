@@ -119,15 +119,23 @@
 </div>
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
+  var configPublic = {
+    apiKey: "AIzaSyApqHFyIUSARTrOJWj7UfQcz3hQr5m32xE",
+    authDomain: "friendlychat-fm.firebaseapp.com",
+    databaseURL: "https://friendlychat-fm.firebaseio.com",
+    storageBucket: "friendlychat-fm.appspot.com",
+    messagingSenderId: "423324572090"
+  };
+  var configPersonal = {
     apiKey: "AIzaSyCSiUr94vzZ8oW59iR2ht7u3twYGNvBy3U",
     authDomain: "apps-on-fire-b8a3e.firebaseapp.com",
     databaseURL: "https://apps-on-fire-b8a3e.firebaseio.com",
     storageBucket: "apps-on-fire-b8a3e.appspot.com",
     messagingSenderId: "423324572090"
   };
-  firebase.initializeApp(config);
+  var publicDb = window.confirm('Do you want to connect to the public server?')
+  // Initialize Firebase
+  firebase.initializeApp(publicDb ? configPublic : configPersonal);
 </script>
 <script src="scripts/main.js"></script>
 </body>
