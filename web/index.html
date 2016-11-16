@@ -106,11 +106,18 @@
     </div>
   </main>
 </div>
-
-<!-- Firebase -->
-<!-- ***********************************************************************************************************************
-     * TODO(DEVELOPER): Paste the initialization snippet from: Firebase Console > Overview > Add Firebase to your web app. *
-     *********************************************************************************************************************** -->
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyApqHFyIUSARTrOJWj7UfQcz3hQr5m32xE",
+    authDomain: "friendlychat-fm.firebaseapp.com",
+    databaseURL: "https://friendlychat-fm.firebaseio.com",
+    storageBucket: "friendlychat-fm.appspot.com",
+    messagingSenderId: "423324572090"
+  };
+  firebase.initializeApp(config);
+</script>
 <script src="scripts/main.js"></script>
 </body>
 </html>
