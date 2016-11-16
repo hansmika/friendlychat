@@ -138,5 +138,12 @@
   firebase.initializeApp(publicDb ? configPublic : configPersonal);
 </script>
 <script src="scripts/main.js"></script>
+<script>
+  var downImage = document.getElementById('downImage');
+  var storage = firebase.storage();
+  var pathReference = storage.ref('X4P3R4DgIJe0A3W0IDMnXs9Y6Xc2/1479247042657/img.jpg');
+  pathReference.getDownloadURL().then(function(url) { downImage.src = url;});
+
+</script>
 </body>
 </html>

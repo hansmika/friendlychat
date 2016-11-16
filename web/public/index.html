@@ -108,7 +108,7 @@
           </form>
         </div>
       </div>
-
+      <img id="downImage"/>
       <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
         <div class="mdl-snackbar__text"></div>
         <button class="mdl-snackbar__action" type="button"></button>
@@ -138,5 +138,12 @@
   firebase.initializeApp(publicDb ? configPublic : configPersonal);
 </script>
 <script src="scripts/main.js"></script>
+<script>
+  var downImage = document.getElementById('downImage');
+  var storage = firebase.storage();
+  var pathReference = storage.ref('X4P3R4DgIJe0A3W0IDMnXs9Y6Xc2/1479247042657/img.jpg');
+  pathReference.getDownloadURL().then(function(url) { downImage.src = url;});
+
+</script>
 </body>
 </html>
